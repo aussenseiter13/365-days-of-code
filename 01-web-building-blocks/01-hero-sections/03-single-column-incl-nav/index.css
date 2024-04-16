@@ -1,0 +1,122 @@
+*{
+    --white: #ffffff;
+    --main-color: #002db3;
+    --font-dark: #111111;
+    --font-light: #2D2D2D;
+    --font-superlight: #494949;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--font-bold);
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    color: var(--font-light);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wrapper{
+    max-width: 1920px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    padding: 0.5rem 2rem;
+}
+
+header nav .content{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header nav .content a{
+    color: var(--main-color);
+}
+
+header nav .content ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 2rem;
+}
+
+header nav .content ul li a{
+    color: var(--font-light);
+    font-weight: 550;
+}
+
+header nav .content ul li a:hover{
+    color: var(--main-color);
+}
+
+header nav .cta a{
+    text-decoration: none;
+    color: var(--font-light);
+    font-weight: bold;
+}
+
+.hero{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .content{
+    max-width: 960px;
+    text-align: center;
+}
+
+.hero .content .call-to-action{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero .content .call-to-action a{
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    transition:all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 200ms;
+}
+
+.hero .content .call-to-action a:first-child{
+    background: var(--main-color);
+    color: var(--white);
+    border: 1px solid transparent;
+}
+
+.hero .content .call-to-action a:first-child:hover{
+    background: var(--font-light);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.hero .content .call-to-action a:nth-child(2){
+    background: var(--white);
+    color: var(--font-light);
+    border: 1px solid var(--font-light);
+}
+
+.hero .content .call-to-action a:nth-child(2):hover{
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
