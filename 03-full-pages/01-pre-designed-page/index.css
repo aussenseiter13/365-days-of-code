@@ -27,6 +27,10 @@ body {
     padding: 4rem 1rem;
 }
 
+.section-header p {
+    max-width: 600px;
+}
+
 /*
     NAV | START
 */
@@ -85,10 +89,10 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 0rem 1rem;
 }
 
 .wrapper .hero .content {
+    padding: 0rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -110,7 +114,7 @@ body {
 }
 
 @media screen and (min-width: 1023px) {
-    .hero .content {
+    .wrapper .hero .content {
         padding: 0rem 4rem;
         max-width: 750px;
     }
@@ -166,4 +170,51 @@ body {
 
 /*
     COMPANY VALUES | END
+*/
+
+/*
+    OUR WORK | START
+*/
+
+.work .clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.work .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.work .projects .project .image {
+    background: var(--gray);
+    height: 200px;
+    width: auto;
+}
+
+@media screen and (min-width: 1023px) {
+    .work .clients {
+        flex-direction: row;
+        gap: 2rem;
+        padding-bottom: 4rem;
+    }
+
+    .work .projects {
+        padding: 0rem 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 1rem;
+    }
+
+    .work .projects .project .image {
+        height: 250px;
+    }
+}
+
+/*
+    OUR WORK | END
 */
