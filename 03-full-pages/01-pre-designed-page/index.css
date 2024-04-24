@@ -1,3 +1,8 @@
+* {
+    --gray: #e3e3e3;
+    --white: #ffffff;
+}
+
 #hamburgerIcon {
     width: 1.6rem;
 }
@@ -12,12 +17,22 @@ body {
     max-width: 1920px;
 }
 
+.section-header {
+    background: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
 /*
     NAV | START
 */
 
 .wrapper nav {
-    background: white;
+    background: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,7 +80,7 @@ body {
 */
 
 .wrapper .hero {
-    background: grey;
+    background: var(--gray);
     height: 80vh;
     display: flex;
     justify-content: start;
@@ -88,7 +103,7 @@ body {
 .wrapper .hero div a {
     background: blue;
     width: fit-content;
-    color: white;
+    color: var(--white);
     border: none;
     font-weight: bold;
     padding: 0.5rem 1rem;
@@ -97,10 +112,58 @@ body {
 @media screen and (min-width: 1023px) {
     .hero .content {
         padding: 0rem 4rem;
-        max-width: 650px;
+        max-width: 750px;
     }
 }
 
 /*
-HERO | END
+    HERO | END
+*/
+
+/*
+    COMPANY VALUES | START
+*/
+
+.company-values {
+    background: var(--white);
+}
+
+.company-values .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0rem 1rem;
+    gap: 1rem;
+}
+
+.company-values .content .item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.company-values .content .item-content p {
+    max-width: 400px;
+}
+
+.company-values .content .item-content .image {
+    width: 250px;
+    min-height: 150px;
+    background: var(--gray);
+    flex-shrink: 0;
+}
+
+@media screen and (min-width: 1023px) {
+    .company-values .content {
+        grid-template-columns: 1fr 1fr;
+        padding: 0rem 4rem;
+        gap: 2rem;
+    }
+
+    .company-values .content .item-content {
+        flex-direction: row;
+    }
+}
+
+/*
+    COMPANY VALUES | END
 */
