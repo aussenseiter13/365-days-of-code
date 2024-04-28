@@ -7,24 +7,18 @@
     width: 1.6rem;
 }
 
-body {
-    background: lightblue;
-}
-
 .wrapper {
-    background: orange;
     max-width: 1920px;
     margin: 0 auto;
 }
 
 .section-header {
-    background: blanchedalmond;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 6rem 1rem;
 }
 
 .section-header p {
@@ -189,12 +183,13 @@ body {
 .work .projects {
     display: flex;
     flex-direction: column;
+    padding: 0rem 1rem;
     gap: 1rem;
 }
 
 .work .projects .project .image {
     background: var(--gray);
-    height: 200px;
+    height: 300px;
     width: auto;
 }
 
@@ -210,11 +205,11 @@ body {
         padding: 0rem 4rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 2rem 1rem;
+        gap: 2rem 4rem;
     }
 
     .work .projects .project .image {
-        height: 250px;
+        height: 350px;
     }
 }
 
@@ -226,10 +221,6 @@ body {
     OUR TEAM | START
 */
 
-.team {
-    background: red;
-}
-
 .team .members {
     display: grid;
     grid-template-columns: 1fr;
@@ -238,7 +229,6 @@ body {
 }
 
 .team .members .member {
-    background: yellowgreen;
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -253,14 +243,9 @@ body {
 }
 
 .team .members .member .info {
-    background: orange;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-
-.team .members .member .info .content {
-    background: blanchedalmond;
 }
 
 .team .members .member .info .icons {
@@ -291,11 +276,32 @@ body {
     TESTIMONIALS | START
 */
 
-.testimonials .content {
-    background: yellow;
+.testimonials {
+    display: none;
 }
 
-.testimonials .content .image {
+@media screen and (min-width: 1023px) {
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testimonials .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        max-width: 800px;
+        align-self: center;
+    }
+
+    .testimonials .content .image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: var(--gray);
+        flex-shrink: 0;
+    }
 }
 
 /*
@@ -310,6 +316,19 @@ body {
     display: none;
 }
 
+@media screen and (min-width: 1023px) {
+    .plans {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .plans .content {
+        display: flex;
+        padding: 0rem 4rem;
+        gap: 2rem;
+    }
+}
+
 /*
     OUR PLANS | END
 */
@@ -320,6 +339,43 @@ body {
 
 .blog {
     display: none;
+}
+
+@media screen and (min-width: 1023px) {
+    .blog {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0rem 4rem;
+        gap: 2rem;
+    }
+
+    .blog .content .blog-item .blog-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .blog .content .blog-item .blog-content p {
+        max-width: 400px;
+    }
+
+    .blog .content .blog-item .blog-image {
+        width: 250px;
+        min-height: 150px;
+        background: var(--gray);
+        flex-shrink: 0;
+    }
+
+    .blog .content .blog-item {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
 }
 
 /*
@@ -334,6 +390,29 @@ body {
     display: none;
 }
 
+@media screen and (min-width: 1023px) {
+    .consulation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 8rem 0rem;
+    }
+
+    .consulation p {
+        max-width: 600px;
+    }
+
+    .consulation a {
+        background: blue;
+        color: var(--white);
+        font-weight: bold;
+        padding: 0.5rem 2rem;
+    }
+}
+
 /*
     CONSULTATION | END
 */
@@ -343,18 +422,17 @@ body {
 */
 
 footer {
-    margin-top: 4rem;
     background: var(--gray);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 1rem;
+    padding: 1rem 1rem;
 }
 
 @media screen and (min-width: 1023px) {
     footer {
-        padding: 0rem 4rem;
+        padding: 1rem 4rem;
     }
 }
 
